@@ -513,6 +513,128 @@ main {
     color: var(--secondary-color);
 }
 
+/* Professor Section - Left aligned with photo on right */
+.professor-section {
+    max-width: 1000px;
+}
+
+.professor-card {
+    display: flex;
+    gap: var(--spacing-2xl);
+    align-items: flex-start;
+    background: var(--bg-secondary);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-2xl);
+    box-shadow: var(--shadow-md);
+}
+
+.professor-info {
+    flex: 1;
+    text-align: left;
+}
+
+.professor-name {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: var(--spacing-sm);
+}
+
+.professor-role {
+    font-size: 1.25rem;
+    color: var(--secondary-color);
+    font-weight: 600;
+    margin-bottom: var(--spacing-xs);
+}
+
+.professor-affiliation {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    margin-bottom: var(--spacing-xs);
+}
+
+.professor-education {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    margin-bottom: var(--spacing-lg);
+}
+
+.professor-research {
+    margin-bottom: var(--spacing-lg);
+}
+
+.professor-research h4,
+.professor-awards h4 {
+    font-size: 1.1rem;
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-sm);
+    font-weight: 600;
+}
+
+.professor-research p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.professor-awards ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.professor-awards li {
+    padding: var(--spacing-xs) 0;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    border-bottom: 1px solid var(--bg-tertiary);
+}
+
+.professor-awards li:last-child {
+    border-bottom: none;
+}
+
+.professor-awards li strong {
+    color: var(--text-primary);
+    font-weight: 600;
+    margin-right: var(--spacing-sm);
+}
+
+.professor-photo-container {
+    flex-shrink: 0;
+}
+
+.professor-photo {
+    width: 250px;
+    height: 320px;
+    object-fit: cover;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-lg);
+}
+
+@media (max-width: 768px) {
+    .professor-card {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .professor-info {
+        text-align: center;
+    }
+
+    .professor-photo-container {
+        margin: 0 auto;
+    }
+
+    .professor-photo {
+        width: 200px;
+        height: 260px;
+    }
+
+    .professor-awards li {
+        text-align: left;
+    }
+}
+
 /* ============================================
    Publication List
    ============================================ */
