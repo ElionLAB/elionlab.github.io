@@ -563,6 +563,15 @@ main {
     text-decoration: none;
 }
 
+.publication-links .coming-soon {
+    font-size: 0.875rem;
+    padding: var(--spacing-xs) var(--spacing-sm);
+    background-color: var(--bg-tertiary);
+    border-radius: var(--radius-sm);
+    color: var(--text-light);
+    font-style: italic;
+}
+
 .publication-year {
     display: inline-block;
     background-color: var(--primary-color);
