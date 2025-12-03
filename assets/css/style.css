@@ -206,8 +206,12 @@ li {
 }
 
 .logo img {
-    height: 40px;
+    height: 45px;
     width: auto;
+}
+
+.logo span {
+    display: none;
 }
 
 .nav-menu {
