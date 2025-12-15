@@ -517,6 +517,29 @@ main {
     color: var(--secondary-color);
 }
 
+/* Empty Team Card (To Be Appointed) */
+.team-card-empty {
+    opacity: 0.7;
+}
+
+.team-photo-placeholder {
+    width: 150px;
+    height: 150px;
+    border-radius: var(--radius-full);
+    background: var(--bg-tertiary);
+    margin: 0 auto var(--spacing-lg);
+    border: 4px dashed var(--text-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.team-photo-placeholder span {
+    font-size: 3rem;
+    color: var(--text-light);
+    font-weight: 300;
+}
+
 /* Professor Section - Vertical Layout */
 .professor-section {
     max-width: 800px;
