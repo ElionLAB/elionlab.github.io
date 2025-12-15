@@ -517,19 +517,26 @@ main {
     color: var(--secondary-color);
 }
 
-/* Professor Section - Left aligned with photo on right */
+/* Professor Section - New Layout */
 .professor-section {
     max-width: 1000px;
 }
 
 .professor-card {
     display: flex;
-    gap: var(--spacing-2xl);
-    align-items: flex-start;
+    flex-direction: column;
     background: var(--bg-secondary);
     border-radius: var(--radius-lg);
     padding: var(--spacing-2xl);
     box-shadow: var(--shadow-md);
+}
+
+/* Top section: Info + Photo side by side */
+.professor-top {
+    display: flex;
+    gap: var(--spacing-2xl);
+    align-items: flex-start;
+    margin-bottom: var(--spacing-xl);
 }
 
 .professor-info {
@@ -564,7 +571,7 @@ main {
 }
 
 .professor-research {
-    margin-bottom: var(--spacing-lg);
+    margin-bottom: 0;
 }
 
 .professor-research h4,
@@ -580,43 +587,57 @@ main {
     line-height: 1.6;
 }
 
-.professor-awards ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.professor-awards li {
-    padding: var(--spacing-xs) 0;
-    color: var(--text-secondary);
-    font-size: 0.95rem;
-    border-bottom: 1px solid var(--bg-tertiary);
-}
-
-.professor-awards li:last-child {
-    border-bottom: none;
-}
-
-.professor-awards li strong {
-    color: var(--text-primary);
-    font-weight: 600;
-    margin-right: var(--spacing-sm);
-}
-
 .professor-photo-container {
     flex-shrink: 0;
 }
 
 .professor-photo {
-    width: 250px;
-    height: 320px;
+    width: 200px;
+    height: auto;
+    max-height: 280px;
     object-fit: cover;
+    object-position: top;
     border-radius: var(--radius-md);
     box-shadow: var(--shadow-lg);
 }
 
+/* Awards section - full width below */
+.professor-awards {
+    width: 100%;
+    border-top: 1px solid var(--bg-tertiary);
+    padding-top: var(--spacing-lg);
+}
+
+.awards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-md);
+}
+
+.award-item {
+    padding: var(--spacing-sm);
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    background: var(--bg-tertiary);
+    border-radius: var(--radius-sm);
+    line-height: 1.5;
+}
+
+.award-item strong {
+    color: var(--text-primary);
+    font-weight: 600;
+    display: block;
+    margin-bottom: var(--spacing-xs);
+}
+
+@media (max-width: 992px) {
+    .awards-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 @media (max-width: 768px) {
-    .professor-card {
+    .professor-top {
         flex-direction: column-reverse;
         text-align: center;
     }
@@ -630,11 +651,15 @@ main {
     }
 
     .professor-photo {
-        width: 200px;
-        height: 260px;
+        width: 180px;
+        max-height: 240px;
     }
 
-    .professor-awards li {
+    .awards-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .award-item {
         text-align: left;
     }
 }
