@@ -517,31 +517,26 @@ main {
     color: var(--secondary-color);
 }
 
-/* Professor Section - New Layout */
+/* Professor Section - Vertical Layout */
 .professor-section {
-    max-width: 1000px;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .professor-card {
     display: flex;
     flex-direction: column;
+    align-items: center;
     background: var(--bg-secondary);
     border-radius: var(--radius-lg);
     padding: var(--spacing-2xl);
     box-shadow: var(--shadow-md);
+    text-align: center;
 }
 
-/* Top section: Info + Photo side by side */
-.professor-top {
-    display: flex;
-    gap: var(--spacing-2xl);
-    align-items: flex-start;
+/* Header section */
+.professor-header {
     margin-bottom: var(--spacing-xl);
-}
-
-.professor-info {
-    flex: 1;
-    text-align: left;
 }
 
 .professor-name {
@@ -567,11 +562,28 @@ main {
 .professor-education {
     font-size: 1rem;
     color: var(--text-secondary);
-    margin-bottom: var(--spacing-lg);
+    margin-bottom: 0;
 }
 
+/* Photo section */
+.professor-photo-container {
+    margin-bottom: var(--spacing-xl);
+}
+
+.professor-photo {
+    width: 280px;
+    height: auto;
+    max-height: 350px;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-lg);
+}
+
+/* Research Interests */
 .professor-research {
-    margin-bottom: 0;
+    margin-bottom: var(--spacing-xl);
+    width: 100%;
 }
 
 .professor-research h4,
@@ -587,21 +599,7 @@ main {
     line-height: 1.6;
 }
 
-.professor-photo-container {
-    flex-shrink: 0;
-}
-
-.professor-photo {
-    width: 200px;
-    height: auto;
-    max-height: 280px;
-    object-fit: cover;
-    object-position: top;
-    border-radius: var(--radius-md);
-    box-shadow: var(--shadow-lg);
-}
-
-/* Awards section - full width below */
+/* Awards section */
 .professor-awards {
     width: 100%;
     border-top: 1px solid var(--bg-tertiary);
@@ -621,6 +619,7 @@ main {
     background: var(--bg-tertiary);
     border-radius: var(--radius-sm);
     line-height: 1.5;
+    text-align: left;
 }
 
 .award-item strong {
@@ -637,30 +636,13 @@ main {
 }
 
 @media (max-width: 768px) {
-    .professor-top {
-        flex-direction: column-reverse;
-        text-align: center;
-    }
-
-    .professor-info {
-        text-align: center;
-    }
-
-    .professor-photo-container {
-        margin: 0 auto;
-    }
-
     .professor-photo {
-        width: 180px;
-        max-height: 240px;
+        width: 220px;
+        max-height: 280px;
     }
 
     .awards-grid {
         grid-template-columns: 1fr;
-    }
-
-    .award-item {
-        text-align: left;
     }
 }
 
