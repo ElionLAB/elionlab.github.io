@@ -5,12 +5,12 @@
 
 /* CSS Custom Properties (Variables) */
 :root {
-    /* Color Palette - Academic Blue Theme */
-    --primary-color: #1a365d;
-    --primary-light: #2c5282;
-    --primary-dark: #0d1b2a;
-    --secondary-color: #3182ce;
-    --accent-color: #63b3ed;
+    /* Color Palette - Konkuk University Green Theme */
+    --primary-color: #0e664f;
+    --primary-light: #148c6b;
+    --primary-dark: #0a4a3a;
+    --secondary-color: #1a8f6e;
+    --accent-color: #4db897;
     
     /* Neutral Colors */
     --text-primary: #1a202c;
