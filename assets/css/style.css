@@ -635,7 +635,6 @@ main {
     font-size: 0.9rem;
     margin-bottom: var(--spacing-xs);
     text-align: left;
-    display: inline-block;
 }
 
 /* Awards section */
