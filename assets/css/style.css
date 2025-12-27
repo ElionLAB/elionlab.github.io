@@ -624,13 +624,18 @@ main {
 
 /* Research Highlights specific styling */
 .professor-research.highlights {
-    text-align: left;
+    text-align: center;
+}
+
+.professor-research.highlights h4 {
+    text-align: center;
 }
 
 .professor-research.highlights p {
     font-size: 0.9rem;
     margin-bottom: var(--spacing-xs);
     text-align: left;
+    display: inline-block;
 }
 
 /* Awards section */
