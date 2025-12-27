@@ -622,6 +622,17 @@ main {
     line-height: 1.6;
 }
 
+/* Research Highlights specific styling */
+.professor-research.highlights {
+    text-align: left;
+}
+
+.professor-research.highlights p {
+    font-size: 0.9rem;
+    margin-bottom: var(--spacing-xs);
+    text-align: left;
+}
+
 /* Awards section */
 .professor-awards {
     width: 100%;
