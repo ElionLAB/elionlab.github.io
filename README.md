@@ -15,7 +15,7 @@ ELION Lab is a research group at Konkuk University, led by Prof. Jaehyung Seo. W
 
 ## 🌐 Website
 
-Visit our website: [https://elionlab.github.io](https://elionlab.github.io)
+Visit our website: [https://elionlab.konkuk.ac.kr/](https://elionlab.konkuk.ac.kr/)
 
 ## 📧 Contact
 
