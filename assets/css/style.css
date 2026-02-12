@@ -3,6 +3,26 @@
    Professional Academic Design
    ============================================ */
 
+/* GmarketSans Font */
+@font-face {
+    font-family: 'GmarketSans';
+    font-weight: 500;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'GmarketSans';
+    font-weight: 700;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
+}
+
+/* Bilingual heading style */
+.bilingual {
+    font-family: 'GmarketSans', 'Playfair Display', Georgia, serif;
+}
+
 /* CSS Custom Properties (Variables) */
 :root {
     /* Color Palette - Konkuk University Green Theme */
