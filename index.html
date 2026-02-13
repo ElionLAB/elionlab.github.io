@@ -149,40 +149,128 @@
                 </div>
 
                 <div class="card" style="padding: var(--spacing-xl);">
-                    <h3 class="bilingual" style="text-align: center; margin-bottom: var(--spacing-xl);">진행 중인 프로젝트 (Ongoing Projects)</h3>
-                    <div style="margin-bottom: var(--spacing-lg);">
-                        <h4>1. Continual Representation Learning in Language Models</h4>
-                        <p style="margin-left: var(--spacing-md); color: var(--text-secondary);">
-                            We study how language models continuously update and refine internal representations over time, enabling lifelong learning without catastrophic forgetting, extending to Life2Vec-style research that predicts events and risks across human and model lifecycles using AnyType data.
-                        </p>
+                    <div style="display: flex; align-items: center; justify-content: center; gap: var(--spacing-md); margin-bottom: var(--spacing-xl);">
+                        <h3 class="bilingual" style="text-align: center; margin: 0;">🚀 Ongoing Projects</h3>
+                        <div class="lang-toggle">
+                            <button class="lang-btn active" data-lang="kr">KR</button>
+                            <button class="lang-btn" data-lang="en">EN</button>
+                        </div>
                     </div>
 
-                    <div style="margin-bottom: var(--spacing-lg);">
-                        <h4>2. Reducing Hallucination in Multi-Agent Systems</h4>
-                        <p style="margin-left: var(--spacing-md); color: var(--text-secondary);">
-                            We investigate how hallucinations emerge in multi-agent interactions and develop methods to analyze, verify, and mitigate ungrounded generation, extending beyond single-agent settings to agentic AI–based multidimensional hallucination validation and control.
+                    <!-- Korean Version -->
+                    <div class="lang-content lang-kr active">
+                        <p style="color: var(--text-secondary); margin-bottom: var(--spacing-xl); text-align: center;">
+                            ELION Lab은 언어 모델의 한계를 넘어, 세상을 이해하고 행동하는 차세대 AI를 구축하기 위해 다음의 핵심 과제들을 수행하고 있어요.
                         </p>
+
+                        <div style="margin-bottom: var(--spacing-lg);">
+                            <h4>1. Continual Representation Learning 🧠</h4>
+                            <p style="margin-left: var(--spacing-md); color: var(--text-secondary);">
+                                언어 모델이 새로운 정보를 학습할 때 기존 지식을 잊어버리는 '치명적 망각(Catastrophic Forgetting)' 없이 지식을 지속적으로 업데이트하고 정교화하는 방법을 연구하고 있어요. 이를 Life2Vec 스타일의 연구로 확장하여, AnyType 데이터를 활용해 인간과 모델의 전 생애 주기에 걸친 사건과 리스크를 예측하는 지속학습(Lifelong Learning) 시스템 구축을 목표로 해요.
+                            </p>
+                            <p style="margin-left: var(--spacing-md); color: var(--primary-color); font-size: 0.9rem;">
+                                * Status: 다수의 논문이 글로벌 탑티어 학회 심사 중 (Under Review)
+                            </p>
+                        </div>
+
+                        <div style="margin-bottom: var(--spacing-lg);">
+                            <h4>2. Reducing Hallucination & RAG 🛡️</h4>
+                            <p style="margin-left: var(--spacing-md); color: var(--text-secondary);">
+                                LLM이 잘못된 정보를 생성하는 환각(Hallucination) 현상을 탐지하고 완화하는 최첨단 방법론을 탐구하고 있어요. 내부적으로는 Calibration과 Uncertainty Estimation을 통해 모델의 답변 확신도를 측정하고, 외부적으로는 정밀한 검색 증강(RAG) 과정에서의 Grounding 기술을 개발하여 생성 결과의 신뢰성과 일관성을 극대화하고 있어요.
+                            </p>
+                            <p style="margin-left: var(--spacing-md); color: var(--primary-color); font-size: 0.9rem;">
+                                * Project: IITP 과제 수행 중 (2024-2026, 생성형 AI 성과물의 신뢰성 및 일관성 연구)
+                            </p>
+                        </div>
+
+                        <div style="margin-bottom: var(--spacing-lg);">
+                            <h4>3. Multi-Agent Systems & Orchestration 🤖</h4>
+                            <p style="margin-left: var(--spacing-md); color: var(--text-secondary);">
+                                단일 모델의 한계를 넘어, 여러 AI 에이전트가 협력하는 실용적인 멀티에이전트 시스템 개발을 지향하고 있어요. 효율적인 오케스트레이션(Orchestration) 기술을 통해 Planning과 온톨로지 탐색 과정을 통합하며, 경량화된 모델에서도 복잡한 태스크를 수행할 수 있는 고성능 에이전트 시스템을 구현하는 것이 목표에요.
+                            </p>
+                            <p style="margin-left: var(--spacing-md); color: var(--primary-color); font-size: 0.9rem;">
+                                * Status: 에이전트 관련 신규 연구 과제 지원 및 추진 중<br>
+                                * Collaboration: 고려대학교 Agentic AI Team과 긴밀한 협력 연구 진행
+                            </p>
+                        </div>
+
+                        <div style="margin-bottom: var(--spacing-lg);">
+                            <h4>4. Multimodal LM & World Understanding 👁️</h4>
+                            <p style="margin-left: var(--spacing-md); color: var(--text-secondary);">
+                                텍스트를 넘어 시각 등 다양한 모달리티를 통합하여 물리적/사회적 맥락을 이해하는 연구를 수행하고 있어요. Vision-Language 모델의 의존성 구문 분석(Dependency Parsing)과 시멘틱 청킹(Semantic Chunking) 성능을 높여 멀티모달 문서 검색 및 이해도를 혁신하며, AI가 현실 세계의 상식을 추론할 수 있는 지능을 갖추도록 해요.
+                            </p>
+                            <p style="margin-left: var(--spacing-md); color: var(--primary-color); font-size: 0.9rem;">
+                                * Collaboration: 고려대학교 Document AI & Multimodal 팀과 공동 연구 수행 중
+                            </p>
+                        </div>
+
+                        <div style="margin-bottom: var(--spacing-lg);">
+                            <h4>5. World-Interactive Data Augmentation 🌐</h4>
+                            <p style="margin-left: var(--spacing-md); color: var(--text-secondary);">
+                                웹상의 데이터가 포화 상태에 이른 '데이터 고갈' 시대에 대응하기 위해, 현실 세계 환경과의 상호작용을 통한 데이터 증강 기법을 탐구해요. 환경과의 피드백을 통해 고차원적인 추론(High-level reasoning)과 다차원적 언어 데이터를 스스로 생성해내는 혁신적인 데이터 엔진 기술을 연구해요.
+                            </p>
+                            <p style="margin-left: var(--spacing-md); color: var(--primary-color); font-size: 0.9rem;">
+                                * Collaboration: 싱가포르 A*STAR Research 및 Microsoft Research Asia (MSRA)와 글로벌 협업 진행 중
+                            </p>
+                        </div>
                     </div>
 
-                    <div style="margin-bottom: var(--spacing-lg);">
-                        <h4>3. Anti-Scalability in Language Model Reasoning</h4>
-                        <p style="margin-left: var(--spacing-md); color: var(--text-secondary);">
-                            We explore the limits of scaling for reasoning, examining when and why larger language models fail to reason better and identifying alternative mechanisms beyond scale for robust reasoning.
+                    <!-- English Version -->
+                    <div class="lang-content lang-en">
+                        <p style="color: var(--text-secondary); margin-bottom: var(--spacing-xl); text-align: center;">
+                            ELION Lab is dedicated to pushing the boundaries of language models to build next-generation AI that interacts with the real world.
                         </p>
-                    </div>
 
-                    <div style="margin-bottom: var(--spacing-lg);">
-                        <h4>4. Multimodal Language Modeling and World Understanding</h4>
-                        <p style="margin-left: var(--spacing-md); color: var(--text-secondary);">
-                            We enhance dependency parsing and semantic chunking in vision–language models to improve multimodal document retrieval and understanding, studying how models integrate vision and other modalities to reason about physical and social world contexts beyond text.
-                        </p>
-                    </div>
+                        <div style="margin-bottom: var(--spacing-lg);">
+                            <h4>1. Continual Representation Learning 🧠</h4>
+                            <p style="margin-left: var(--spacing-md); color: var(--text-secondary);">
+                                We investigate methods for language models to continuously update and refine their internal knowledge without experiencing "catastrophic forgetting." Expanding this into Life2Vec-style research, we aim to build lifelong learning systems that utilize AnyType data to predict events and risks across both human and model lifecycles.
+                            </p>
+                            <p style="margin-left: var(--spacing-md); color: var(--primary-color); font-size: 0.9rem;">
+                                * Status: Multiple papers currently under review at top-tier global conferences.
+                            </p>
+                        </div>
 
-                    <div style="margin-bottom: var(--spacing-lg);">
-                        <h4>5. World-Interactive Data Augmentation</h4>
-                        <p style="margin-left: var(--spacing-md); color: var(--text-secondary);">
-                            As online data becomes saturated, we explore world-interactive data augmentation, generating high-level reasoning and multidimensional language data through interaction with real-world environments.
-                        </p>
+                        <div style="margin-bottom: var(--spacing-lg);">
+                            <h4>2. Reducing Hallucination & RAG 🛡️</h4>
+                            <p style="margin-left: var(--spacing-md); color: var(--text-secondary);">
+                                We explore cutting-edge methodologies to detect and mitigate the hallucination phenomenon in LLMs. Internally, we focus on measuring model confidence through calibration and uncertainty estimation. Externally, we strive to maximize the reliability and consistency of generated outputs by developing advanced grounding techniques within precise Retrieval-Augmented Generation (RAG) pipelines.
+                            </p>
+                            <p style="margin-left: var(--spacing-md); color: var(--primary-color); font-size: 0.9rem;">
+                                * Project: Supported by IITP (2024–2026, Research on the Reliability and Coherence of Generative AI Outcomes).
+                            </p>
+                        </div>
+
+                        <div style="margin-bottom: var(--spacing-lg);">
+                            <h4>3. Multi-Agent Systems & Orchestration 🤖</h4>
+                            <p style="margin-left: var(--spacing-md); color: var(--text-secondary);">
+                                Moving beyond the limitations of single models, we aim to develop practical and precise multi-agent systems. Through efficient orchestration, we integrate planning and ontology exploration to achieve high performance even with lightweight models, enabling them to execute complex, multi-step tasks.
+                            </p>
+                            <p style="margin-left: var(--spacing-md); color: var(--primary-color); font-size: 0.9rem;">
+                                * Status: New research proposals in progress; actively expanding the agentic AI agenda.<br>
+                                * Collaboration: Joint research with the Korea University Agentic AI Team.
+                            </p>
+                        </div>
+
+                        <div style="margin-bottom: var(--spacing-lg);">
+                            <h4>4. Multimodal LM & World Understanding 👁️</h4>
+                            <p style="margin-left: var(--spacing-md); color: var(--text-secondary);">
+                                We conduct research on integrating diverse modalities, such as vision, to understand physical and social contexts beyond text. By enhancing dependency parsing and semantic chunking in Vision-Language Models (VLMs), we innovate multimodal document retrieval and empower AI to reason with real-world common sense.
+                            </p>
+                            <p style="margin-left: var(--spacing-md); color: var(--primary-color); font-size: 0.9rem;">
+                                * Collaboration: Ongoing joint research with the Korea University Document AI & Multimodal Team.
+                            </p>
+                        </div>
+
+                        <div style="margin-bottom: var(--spacing-lg);">
+                            <h4>5. World-Interactive Data Augmentation 🌐</h4>
+                            <p style="margin-left: var(--spacing-md); color: var(--text-secondary);">
+                                To address the era of "data exhaustion" as online data becomes saturated, we explore world-interactive data augmentation. We research innovative data engines that autonomously generate high-level reasoning and multi-dimensional language data through direct feedback and interaction with real-world environments.
+                            </p>
+                            <p style="margin-left: var(--spacing-md); color: var(--primary-color); font-size: 0.9rem;">
+                                * Collaboration: International collaboration in progress with Singapore A*STAR Research and Microsoft Research Asia (MSRA).
+                            </p>
+                        </div>
                     </div>
                 </div>
 

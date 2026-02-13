@@ -153,6 +153,27 @@
     }
 
     /**
+     * Language Toggle for Ongoing Projects
+     */
+    function initLangToggle() {
+        const langBtns = document.querySelectorAll('.lang-btn');
+        if (!langBtns.length) return;
+
+        langBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                const lang = this.dataset.lang;
+                const card = this.closest('.card');
+
+                card.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+
+                card.querySelectorAll('.lang-content').forEach(c => c.classList.remove('active'));
+                card.querySelector('.lang-' + lang).classList.add('active');
+            });
+        });
+    }
+
+    /**
      * Initialize all functions
      */
     function init() {
@@ -162,6 +183,7 @@
         initSmoothScroll();
         initLazyLoading();
         initScrollAnimations();
+        initLangToggle();
     }
 
     // Run on DOM ready
