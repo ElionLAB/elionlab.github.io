@@ -56,7 +56,7 @@
     --spacing-3xl: 4rem;
     
     /* Layout */
-    --max-width: 1200px;
+    --max-width: 1400px;
     --header-height: 70px;
     
     /* Shadows */
@@ -329,7 +329,7 @@ main {
 .hero .subtitle {
     font-size: 1.25rem;
     opacity: 0.9;
-    max-width: 700px;
+    max-width: 900px;
     margin: 0 auto var(--spacing-xl);
     color: rgba(255, 255, 255, 0.9);
 }
@@ -483,7 +483,7 @@ main {
 }
 
 .section-header p {
-    max-width: 600px;
+    max-width: 800px;
     margin: var(--spacing-md) auto 0;
 }
 
@@ -953,7 +953,7 @@ main {
 
 .page-header p {
     color: rgba(255, 255, 255, 0.9);
-    max-width: 600px;
+    max-width: 800px;
     margin: 0 auto;
 }
 
