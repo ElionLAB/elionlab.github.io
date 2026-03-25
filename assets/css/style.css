@@ -560,6 +560,34 @@ main {
     margin-bottom: var(--spacing-md);
 }
 
+.team-affiliation {
+    font-size: 0.75rem;
+    color: var(--text-light);
+    margin-bottom: var(--spacing-sm);
+}
+
+.team-interest {
+    font-size: 0.85rem;
+    color: var(--text-light);
+    margin-bottom: var(--spacing-md);
+    font-style: italic;
+}
+
+.team-email {
+    font-size: 0.8rem;
+    margin-bottom: var(--spacing-md);
+}
+
+.team-email a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+
+.team-email a:hover {
+    color: var(--secondary-color);
+}
+
 .team-links {
     display: flex;
     justify-content: center;
