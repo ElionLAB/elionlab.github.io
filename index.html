@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com https://cdn.jsdelivr.net; img-src 'self' https://*.google-analytics.com https://*.googletagmanager.com https://stats.g.doubleclick.net; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://stats.g.doubleclick.net https://www.google.com; frame-src https://www.google.com https://consent.google.com; object-src 'none'; base-uri 'self'">
     <meta name="description" content="ELION Lab - Advancing Language Model Research for a Better Future. Explore our cutting-edge research in NLP, machine learning, and AI.">
     <meta name="keywords" content="language models, NLP, natural language processing, machine learning, AI research, deep learning">
     <meta name="author" content="ELION Lab">
@@ -20,7 +21,8 @@
     <meta property="og:type" content="website">
     <meta property="og:title" content="ELION Lab - Language Model Research">
     <meta property="og:description" content="Advancing Language Model Research for a Better Future">
-    <meta property="og:image" content="assets/images/logos/og-image.png">
+    <meta property="og:image" content="https://elionlab.konkuk.ac.kr/assets/images/logos/og-image.png">
+    <meta property="og:url" content="https://elionlab.konkuk.ac.kr/">
 
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="assets/images/logos/favicon.svg">
@@ -86,7 +88,7 @@
         <section class="section">
             <div class="container">
                 <div class="section-header">
-                    <h2 class="bilingual">최신 뉴스 (Latest News)</h2>
+                    <h2 class="bilingual"><span lang="ko">최신 뉴스</span> (Latest News)</h2>
                     <p>Stay updated with our recent achievements and announcements.</p>
                 </div>
 
@@ -106,7 +108,7 @@
                         </li>
                         <li style="padding: var(--spacing-md) 0; border-bottom: 1px solid var(--border-color);">
                             <span class="publication-year">Apr 2026</span>
-                            <strong>한국콘텐츠진흥원(KOCCA) 신규 과제</strong>에 선정되었습니다 — <strong>「개인 맞춤형 국어생활종합상담 서비스를 위한 한국어 지식 연계 시스템 개발」</strong> (2026~2028, 총 41억 원).
+                            <span lang="ko"><strong>한국콘텐츠진흥원(KOCCA) 신규 과제</strong>에 선정되었습니다 — <strong>「개인 맞춤형 국어생활종합상담 서비스를 위한 한국어 지식 연계 시스템 개발」</strong> (2026~2028, 총 41억 원).</span>
                         </li>
                         <li style="padding: var(--spacing-md) 0; border-bottom: 1px solid var(--border-color);">
                             <span class="publication-year">Apr 2026</span>
@@ -145,7 +147,7 @@
         <section class="section section-alt">
             <div class="container">
                 <div class="section-header">
-                    <h2 class="bilingual" style="font-size: 2.5rem;">모집 중! (NOW HIRING!)</h2>
+                    <h2 class="bilingual" style="font-size: 2.5rem;"><span lang="ko">모집 중!</span> (NOW HIRING!)</h2>
                 </div>
 
                 <div class="card" style="padding: var(--spacing-xl);">
@@ -158,7 +160,7 @@
                     </div>
 
                     <!-- Korean Version -->
-                    <div class="lang-content lang-kr active">
+                    <div class="lang-content lang-kr active" lang="ko">
                         <p style="color: var(--text-secondary); margin-bottom: var(--spacing-xl); text-align: center;">
                             ELION Lab은 언어 모델의 한계를 넘어, 세상을 이해하고 행동하는 차세대 AI를 구축하기 위해 다음의 핵심 과제들을 수행하고 있어요.
                         </p>
@@ -273,7 +275,7 @@
                 </div>
 
                 <div class="text-center" style="margin-top: var(--spacing-xl);">
-                    <p class="bilingual" style="margin-bottom: var(--spacing-md); font-size: 1.3rem;"><strong>ELION Lab에서 인공지능 연구에 열정을 지닌 인턴, 석사, 박사과정 학생을 모집합니다</strong><br><strong>(We are now looking for talented M.S/Ph.D students, and research interns.)</strong></p>
+                    <p class="bilingual" style="margin-bottom: var(--spacing-md); font-size: 1.3rem;"><strong lang="ko">ELION Lab에서 인공지능 연구에 열정을 지닌 인턴, 석사, 박사과정 학생을 모집합니다</strong><br><strong>(We are now looking for talented M.S/Ph.D students, and research interns.)</strong></p>
                     <a href="https://forms.gle/hnbmCB3afuWKgrKD6" target="_blank" rel="noopener noreferrer" class="btn btn-primary">APPLY</a>
                 </div>
             </div>
@@ -283,7 +285,7 @@
         <section class="section">
             <div class="container">
                 <div class="section-header">
-                    <h2 class="bilingual">주요 논문 (Featured Publications)</h2>
+                    <h2 class="bilingual"><span lang="ko">주요 논문</span> (Featured Publications)</h2>
                     <p>Selected recent papers from our research group.</p>
                 </div>
 
@@ -512,6 +514,7 @@
             <p class="footer-copyright">
                 © 2026 ELION Lab. All rights reserved.
             </p>
+            <p class="footer-copyright" style="font-size: 0.75rem;">This site uses Google Analytics for anonymous visit statistics. <span lang="ko">본 사이트는 방문 통계 확인을 위해 Google Analytics를 사용합니다.</span></p>
         </div>
     </footer>
 
