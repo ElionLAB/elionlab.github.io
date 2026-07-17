@@ -18,14 +18,12 @@
     function initMobileMenu() {
         if (!menuToggle || !navMenu) return;
 
+        // The closed mobile menu is removed from the accessibility tree by
+        // CSS (visibility: hidden), so only aria-expanded needs managing here.
         menuToggle.addEventListener('click', function() {
             this.classList.toggle('active');
             navMenu.classList.toggle('active');
-            
-            // Update ARIA attributes for accessibility
-            const isExpanded = navMenu.classList.contains('active');
-            this.setAttribute('aria-expanded', isExpanded);
-            navMenu.setAttribute('aria-hidden', !isExpanded);
+            this.setAttribute('aria-expanded', navMenu.classList.contains('active'));
         });
 
         // Close menu when clicking on a link
@@ -34,7 +32,6 @@
                 menuToggle.classList.remove('active');
                 navMenu.classList.remove('active');
                 menuToggle.setAttribute('aria-expanded', 'false');
-                navMenu.setAttribute('aria-hidden', 'true');
             });
         });
 
@@ -44,7 +41,6 @@
                 menuToggle.classList.remove('active');
                 navMenu.classList.remove('active');
                 menuToggle.setAttribute('aria-expanded', 'false');
-                navMenu.setAttribute('aria-hidden', 'true');
             }
         });
     }
@@ -75,11 +71,13 @@
      * Active Navigation Link
      */
     function setActiveNavLink() {
-        const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-        
+        // Normalize so extensionless URLs (e.g. /about) still match "about.html"
+        const currentPage = (window.location.pathname.split('/').pop() || 'index.html')
+            .replace(/\.html$/, '') || 'index';
+
         navLinks.forEach(link => {
-            const href = link.getAttribute('href');
-            if (href === currentPage || (currentPage === '' && href === 'index.html')) {
+            const href = link.getAttribute('href').replace(/\.html$/, '');
+            if (href === currentPage) {
                 link.classList.add('active');
             } else {
                 link.classList.remove('active');
@@ -112,47 +110,6 @@
     }
 
     /**
-     * Lazy Loading Images
-     */
-    function initLazyLoading() {
-        if ('IntersectionObserver' in window) {
-            const lazyImages = document.querySelectorAll('img[data-src]');
-            
-            const imageObserver = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        const img = entry.target;
-                        img.src = img.dataset.src;
-                        img.removeAttribute('data-src');
-                        observer.unobserve(img);
-                    }
-                });
-            });
-
-            lazyImages.forEach(img => imageObserver.observe(img));
-        }
-    }
-
-    /**
-     * Animation on Scroll
-     */
-    function initScrollAnimations() {
-        if ('IntersectionObserver' in window) {
-            const animatedElements = document.querySelectorAll('.animate-on-scroll');
-            
-            const animationObserver = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('animated');
-                    }
-                });
-            }, { threshold: 0.1 });
-
-            animatedElements.forEach(el => animationObserver.observe(el));
-        }
-    }
-
-    /**
      * Language Toggle for Ongoing Projects
      */
     function initLangToggle() {
@@ -181,8 +138,6 @@
         initHeaderScroll();
         setActiveNavLink();
         initSmoothScroll();
-        initLazyLoading();
-        initScrollAnimations();
         initLangToggle();
     }
 
