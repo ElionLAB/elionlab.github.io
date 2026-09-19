@@ -342,6 +342,52 @@ main {
 }
 
 /* ============================================
+   Publication Tabs
+   ============================================ */
+.pub-tabs {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-xl);
+    border-bottom: 2px solid var(--border-color);
+}
+
+.pub-tab {
+    background: none;
+    border: none;
+    border-bottom: 3px solid transparent;
+    margin-bottom: -2px;
+    padding: var(--spacing-sm) var(--spacing-xl);
+    font-family: var(--font-heading);
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: color var(--transition-fast), border-color var(--transition-fast);
+}
+
+.pub-tab span[lang="ko"] {
+    margin-right: var(--spacing-xs);
+}
+
+.pub-tab:hover {
+    color: var(--primary-color);
+}
+
+.pub-tab.active {
+    color: var(--primary-color);
+    border-bottom-color: var(--primary-color);
+}
+
+.pub-tab-panel {
+    display: none;
+}
+
+.pub-tab-panel.active {
+    display: block;
+}
+
+/* ============================================
    Buttons
    ============================================ */
 .btn {

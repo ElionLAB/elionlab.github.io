@@ -131,6 +131,30 @@
     }
 
     /**
+     * Publication tabs (Featured Publications: International / Domestic)
+     */
+    function initPubTabs() {
+        const tabs = document.querySelectorAll('.pub-tab');
+        if (!tabs.length) return;
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                const target = tab.getAttribute('data-tab');
+
+                tabs.forEach(t => {
+                    const isActive = t === tab;
+                    t.classList.toggle('active', isActive);
+                    t.setAttribute('aria-selected', isActive ? 'true' : 'false');
+                });
+
+                document.querySelectorAll('.pub-tab-panel').forEach(panel => {
+                    panel.classList.toggle('active', panel.id === target);
+                });
+            });
+        });
+    }
+
+    /**
      * Initialize all functions
      */
     function init() {
@@ -139,6 +163,7 @@
         setActiveNavLink();
         initSmoothScroll();
         initLangToggle();
+        initPubTabs();
     }
 
     // Run on DOM ready
